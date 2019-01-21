@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OidcClientDemo.WPF", "OidcClientDemo.WPF\OidcClientDemo.WPF.csproj", "{0CE0DD16-94B6-4485-ACA8-94B5EEB21575}"
+EndProject
+
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0CE0DD16-94B6-4485-ACA8-94B5EEB21575}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CE0DD16-94B6-4485-ACA8-94B5EEB21575}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CE0DD16-94B6-4485-ACA8-94B5EEB21575}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CE0DD16-94B6-4485-ACA8-94B5EEB21575}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6F46DEFA-E6A7-42DC-8E8D-6A322D193CAA}
+	EndGlobalSection
+EndGlobal

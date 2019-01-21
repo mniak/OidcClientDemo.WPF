@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="OidcClientDemo.WPF.UserControls.TokenViewer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:OidcClientDemo.WPF.UserControls"
+             xmlns:conv="clr-namespace:OidcClientDemo.WPF.Converters"
+             mc:Ignorable="d" Name="Root"
+             d:DesignWidth="400">
+    <UserControl.Resources>
+        <conv:ThicknessMultiplier x:Key="BottomThicknessConverter" Multiplier="0,0,0,1"/>
+        <conv:ThicknessMultiplier x:Key="RightThicknessConverter" Multiplier="0,0,1,0"/>
+    </UserControl.Resources>
+    <Grid DataContext="{Binding ElementName=Root, Mode=OneWay}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label   Grid.Row="0" Grid.Column="0" Margin="2,0,8,0">ID Token</Label>
+        <TextBox Grid.Row="0" Grid.Column="1" BorderThickness="0" Margin="0" Text="{Binding IdToken}" Background="{x:Null}" IsReadOnly="True"/>
+        <Border  Grid.Row="0" Grid.ColumnSpan="2" BorderThickness="{Binding GridThickness, Converter={StaticResource BottomThicknessConverter}}" BorderBrush="{Binding GridBrush}"/>
+        <Label   Grid.Row="1" Grid.Column="0" Margin="2,0,8,0">Access Token</Label>
+        <TextBox Grid.Row="1" Grid.Column="1" BorderThickness="0" Margin="0" Text="{Binding AccessToken}" Background="{x:Null}" IsReadOnly="True"/>
+        <Border  Grid.Row="1" Grid.ColumnSpan="2" BorderThickness="{Binding GridThickness, Converter={StaticResource BottomThicknessConverter}}" BorderBrush="{Binding GridBrush}"/>
+        <Label   Grid.Row="2" Grid.Column="0" Margin="2,0,8,0">Expires In</Label>
+        <TextBox Grid.Row="2" Grid.Column="1" BorderThickness="0" Margin="0" Text="{Binding ExpiresIn}" Background="{x:Null}" IsReadOnly="True"/>
+        <Border  Grid.Row="2" Grid.ColumnSpan="2" BorderThickness="{Binding GridThickness, Converter={StaticResource BottomThicknessConverter}}" BorderBrush="{Binding GridBrush}"/>
+        <Label   Grid.Row="3" Grid.Column="0" Margin="2,0,8,0">Token Type</Label>
+        <TextBox Grid.Row="3" Grid.Column="1" Margin="0" BorderThickness="0" Text="{Binding TokenType}" Background="{x:Null}" IsReadOnly="True"/>
+        <Border  Grid.RowSpan="4" BorderThickness="{Binding GridThickness, Converter={StaticResource RightThicknessConverter}}" BorderBrush="{Binding GridBrush}"/>
+    </Grid>
+</UserControl>

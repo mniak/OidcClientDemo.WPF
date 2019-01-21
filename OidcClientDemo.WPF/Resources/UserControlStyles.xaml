@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:uc="clr-namespace:OidcClientDemo.WPF.UserControls"
+                    xmlns:local="clr-namespace:OidcClientDemo.WPF.Resources">
+    <Style TargetType="uc:TokenViewer">
+        <!--<Setter Property="GridBrush" Value="{Binding BorderBrush RelativeSource={RelativeSource AncestorType=uc:TokenViewer}}"/>
+        <Setter Property="GridThickness" Value="{Binding BorderThickness RelativeSource={RelativeSource AncestorType=uc:TokenViewer}}"/>-->
+        <Setter Property="GridThickness" Value="1"/>
+        <Setter Property="GridBrush" Value="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"/>
+    </Style>
+</ResourceDictionary>

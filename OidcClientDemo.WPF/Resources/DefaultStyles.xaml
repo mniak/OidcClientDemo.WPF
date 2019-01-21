@@ -1,0 +1,22 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:OidcClientDemo.WPF.Resources">
+    <Style TargetType="TextBox">
+        <Setter Property="Height" Value="23"/>
+        <Setter Property="Margin" Value="0,0,0,5"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter  Property="VerticalContentAlignment" Value="Center"/>
+    </Style>
+    <Style TargetType="Label">
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Margin" Value="0,8,0,3"/>
+        <Setter  Property="VerticalContentAlignment" Value="Center"/>
+    </Style>
+    <Style TargetType="Window" x:Key="DefaultWindowStyle">
+    </Style>
+    <Style TargetType="Button">
+        <Setter Property="Height" Value="32"/>
+        <Setter Property="Margin" Value="0,8,0,8"/>
+    </Style>
+    
+</ResourceDictionary>
