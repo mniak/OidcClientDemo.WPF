@@ -61,8 +61,12 @@ namespace OidcClientDemo.WPF.ViewModel
 
         private bool LoadFromDefaultFile()
         {
-            var json = File.ReadAllText(settingsFilePath);
-            return LoadFromString(json);
+            if (File.Exists(settingsFilePath))
+            {
+                var json = File.ReadAllText(settingsFilePath);
+                return LoadFromString(json);
+            }
+            else return false;
         }
 
         private bool LoadFromString(string json)
